@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="SML_clean" name="trajectory_test" type="trajectory_test_node.py" output="screen"/>
+    <node pkg="rqt_plot" name="plots" type="rqt_plot"/>
+</launch>
