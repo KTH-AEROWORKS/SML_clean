@@ -1,3 +1,3 @@
-# The 'trajectories' module
+# The `trajectories` package
 
-This folder is a python module that implements the 'Trajectory' abstract class and its subclasses.
+This folder is a python package that implements the `Trajectory` abstract class and its subclasses.
