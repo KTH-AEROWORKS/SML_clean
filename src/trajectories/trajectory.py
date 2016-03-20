@@ -9,10 +9,10 @@ import numpy as np
 
 class Trajectory:
 
-    @classmethod 
+    @classmethod
     def description(cls):
         return "Abstract Trajectory"
-        
+    
     
     def __init__(self, offset=np.zeros(3), rotation=np.eye(3)):
         
@@ -33,8 +33,9 @@ class Trajectory:
         
         
     def desired_trajectory(self, time):
-        raise NotImplementedError("Please, implement this method.")
-        
+        raise NotImplementedError(
+            "Please, implement this method in all the Trajectory child classes")
+    
         
     def __add_offset_and_rotation(self, pos, vel, acc, jrk, snp):
         

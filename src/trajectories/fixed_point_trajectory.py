@@ -12,6 +12,9 @@ class FixedPointTrajectory(tj.Trajectory):
     def description(cls):
         return "Fixed Point"
         
+    def __init__(self, offset):
+        tj.Trajectory(offset, np.eye(3))
+        
     def __str__(self):
         string = self.description()
         string += "\nPoint: " + str(self.get_offset())
