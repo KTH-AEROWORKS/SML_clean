@@ -1,0 +1,7 @@
+string trajectory_name
+float64[3] offset
+float64[3] rotation
+string[] parameters_names
+float64[] parameters_values
+---
+bool received

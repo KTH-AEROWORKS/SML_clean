@@ -12,7 +12,8 @@ class CircleTrajectory(tj.Trajectory):
     def description(cls):
         return "Circle"
         
-    def __init__(self, radius=1.0, speed=0.1, offset=np.array([0.0, 0.0, 1.0]), rotation=np.eye(3)):
+    def __init__(self, offset=np.array([0.0, 0.0, 1.0]), rotation=np.zeros(3),
+            radius=1.0, speed=0.1):
         tj.Trajectory.__init__(self, offset, rotation)
         self.__radius = radius
         self.__speed = speed

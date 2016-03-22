@@ -4,7 +4,7 @@ for a rigid body in the 3D space"""
 
 
 import numpy as np
-
+import utils.utility_functions as ufs
 
 
 class Trajectory:
@@ -14,10 +14,10 @@ class Trajectory:
         return "Abstract Trajectory"
     
     
-    def __init__(self, offset=np.zeros(3), rotation=np.eye(3)):
+    def __init__(self, offset=np.zeros(3), rotation=np.zeros(3)):
         
         self.__offset = offset
-        self.__rotation = rotation
+        self.__rotation = ufs.ea_deg_to_rot(np.array(rotation))
         
     
     def __str__(self):
