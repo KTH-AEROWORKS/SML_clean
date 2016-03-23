@@ -9,7 +9,7 @@ Note that there is no need to define a class for making the ROS node.
 
 import rospy as rp
 import geometry_msgs.msg as gm
-import trajectories.database as db
+import trajectories.trajectories_dictionary as db
 import sml_clean.srv as smlsrv
 
 
@@ -37,7 +37,7 @@ The GUI can use this feature to let the user define the desired trajectory.
 my_traj = None
 
 def make_trajectory_handler(request):
-    TrajectoryType = db.database[request.trajectory_name]
+    TrajectoryType = db.trajectories_dictionary[request.trajectory_name]
     params = {}
     params["offset"] = request.offset
     params["rotation"] = request.rotation

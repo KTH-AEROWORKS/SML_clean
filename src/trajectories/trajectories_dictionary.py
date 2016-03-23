@@ -10,7 +10,7 @@ import trajectories.trajectory as at
 import trajectories.fixed_point_trajectory as fpt
 import trajectories.circle_trajectory as ct
 
-database = {}
-database[at.Trajectory.description()] = at.Trajectory
-database[fpt.FixedPointTrajectory.description()] = fpt.FixedPointTrajectory
-database[ct.CircleTrajectory.description()] = ct.CircleTrajectory
+trajectories_dictionary = {}
+trajectories_dictionary[at.Trajectory.description()] = at.Trajectory
+trajectories_dictionary[fpt.FixedPointTrajectory.description()] = fpt.FixedPointTrajectory
+trajectories_dictionary[ct.CircleTrajectory.description()] = ct.CircleTrajectory
